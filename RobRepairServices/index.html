@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+<!-- bootstraps, jquery and javascript links -->	
+	<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<!-- css to over ride bootstraps and customize css -->
+<link rel="stylesheet" href="css/RobRepair.css" />
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	<title>Welcome to Rob's Repair Services!</title>
+</head>
+<body onload="init();" > <!-- function for video player -->
+
+<!-- Navigation bar from bootstraps -->
+<nav class="navbar navbar-default" id="mynavbar">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="RobRepair.html">Rob's Repair Services</a>
+    </div>
+	  <ul class="nav navbar-nav"  > 
+<!--	<ul class="nav navbar-nav navbar-right"> -->
+      <li id="links"><a href="index.html">Home</a></li>
+      <li id="links"><a href="about.html">About Us</a></li>
+      <li id="links"><a href="services.html">Services</a></li>
+	  <li id="links"><a href="maps.html">Directions</a></li>
+      <li id="links"><a href="order1.html">Order</a></li>
+    </ul>
+  </div>
+</nav>
+<main>
+
+<!-- Bootstrip code for grid system: columns must = 12 -->
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-sm-4" id="videoLeft" style="background-color:lavender;">   
+    
+				<video id="Video1" controls style="border: 1px solid blue;"  width="420" title="video element">            
+					
+					  <source src="officeSpace.mp4.mp4" type="video/mp4" />
+				</video>
+    
+				<div id="buttonbar" style="display: none;")>
+					<button id="restart" title="Restart button">[]</button> 
+					<button id="slower" title="Slower playback button">-</button> 
+					<button id="rew" title="Rewind button" >&lt;&lt;</button>
+					<button id="play" title="Play button">&gt;</button>
+					<button id="fwd" title="Forward button" >&gt;&gt;</button>
+					<button id="faster" title="Faster playback button">+</button>
+					<button id="Button2" title="Mute button" >Mute</button>     
+					<br />
+					<label>Playback </label>
+						<label>Reset playback rate: </label><button id="normal" title="Reset playback rate button">=</button>    
+					
+					<label>  Volume </label>
+						<button id="volDn"  title="Volume down button">-</button>
+						<button id="volUp"  title="Volume up button">+</button>
+						<button id="mute" title="Mute button" >Mute</button>        
+				</div>   
+    <br/>  
+
+				<div id= "inputField" style="display:none;" >
+				<label><br/>
+				<input type="text" id="videoFile" style="width: 0px;"  title="video file input field" value="" />        
+				<button id="loadVideo" title="Load video button" ></button>
+				</label>
+				</div>
+				<div title="Error message area" id="errorMsg" style="color:Red;"></div>  
+				</div>
+				<div class="col-sm-8" style="background-color:lavenderblush;">
+
+
+				<h2>Don't let your devices drive you mad. <br>Let us fix your devices for you!</h2>
+				<ul>
+					<li>Does your device start?</li>
+					<li>Is your device slow?</li>
+					<li>Does your device function properly</li>
+					<li>Is your screen cracked</li>
+					<li>Do you want to back up your data</li>
+					<li>Rob Repair Services will upgrade or repair your device for you!</li>
+				</ul>
+	
+				</div>
+				<div>
+
+				<img src="images/lowprice.jpg" alt="low price">
+				<img src="images/120day.png" alt="120 day warranty">
+				<img src="images/customersupport.jpg" alt="customer service award">
+				</div>
+			</div>
+		</div>
+	</div>
+</main>
+	
+<footer>
+		&copy Rob Repair Services | <a href="tel:631-766-6811">631-766-6811</a> | <a href="mailto:Rob@RobRepair.com">Rob@RobRepair.com</a>
+</footer>
+	<script src="RobRepair.js"></script> 
+</body>
+</html>

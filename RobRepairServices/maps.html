@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+  <head>
+  	<meta charset="UTF-8">
+<!-- bootstraps, jquery and javascript links -->	
+	<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="css/RobRepair.css" />
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+  
+    <style>
+      #map {
+        height: 300px;
+        width: 50%;
+		text-align: center;
+       }
+    </style>
+  </head>
+<body>
+<!-- Navigation bar from bootstraps -->
+  <nav class="navbar navbar-default" id="mynavbar">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="RobRepair.html">Rob's Repair Services</a>
+    </div>
+	  <ul class="nav navbar-nav"  > 
+	<ul class="nav navbar-nav navbar-right"> 
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="services.html">Services</a></li>
+	  <li><a href="maps.html">Directions</a></li>
+      <li><a href="order1.html">Order</a></li>
+    </ul>
+  </div>
+</nav>
+    <h3>Bring in your computer, tablet or cell to our Huntington store</h3>
+    <div id="map"></div>
+<!-- Script to show map location with marker -->
+<script>
+function initMap() 
+{
+			var uluru = {lat: 40.870955, lng: -73.429133};
+			var map = new google.maps.Map(document.getElementById('map'), {
+			  zoom: 13,
+			  center: uluru
+			});
+			var marker = new google.maps.Marker({
+			  position: uluru,
+			  map: map
+			});
+}
+</script>
+<!-- API for map directions -->
+<script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBr1nPG_vQ-D03RAiw_-j1PyKVzkNTZ568&callback=initMap">
+</script>
+	
+	<div>
+
+	<h3><strong>Directions to Rob Repair Services</strong></h3>
+	<p><center><br />
+	Enter your starting address:</p>
+	<form action="http://maps.google.com/maps" method="get" target="_blank"><input name="saddr" type="text" /><br />
+	<input name="daddr" type="hidden" value="315 Main St, Huntington, NY 11743" /><br />
+	<input type="submit" value="Get Directions" /></form>
+	<p></center></p>
+	</div>
+</body>
+</html>

@@ -1,0 +1,103 @@
+.col-sm-4, .col-sm-12, col-sm-3, ul, #verifyInfo, #form1, #form2, 
+{	padding: 2em, 2em, 2em, 2em;
+	font-size: 1.15em;
+	
+}
+#output
+{
+	padding: 2em;
+	font-size: 1.5em;
+	color: gray;
+}
+form p 
+{
+	color: darkblue;
+	font-size: 1.5em;
+}
+#pc, #notebook, #ipad, #smartphone, #bat, #ram, #ssd, #videoLeft, h3, h2, img
+{
+	text-align: center;
+}
+#links
+{
+	color: darkgrey;
+}
+#map
+{
+	text-align: center;
+}
+#mynavbar
+{
+    color: green;
+    background-color: lightbrown;
+}
+#Video1
+{
+	margin-top: 3em;
+}
+
+.inputField
+{
+	style.display: none;
+}
+ul, li
+{
+	margin: 2em, 2em, 2em, 2em;
+	list-style-type: none;
+}
+.buy
+{
+	margin: 1em, 1em, 1em, 1em;
+	padding: 1em, 1em, 1em, 1em;
+}
+.mobile
+{
+	margin-top: 2em;
+}
+footer
+{
+	text-align: center;
+	margin-top: 1em;
+	color: red;
+	font-size: 1.5em;
+	margin-bottom: 1em;
+}
+/* hide form elements in order.html and contacts */
+.desktop, .laptop, .tablet, .cell, #reset, #order
+{
+	display: none;
+}
+
+/* style rules for pseudo-classes  */
+
+	nav div li a:link {
+	/*	color: #A9A9A9;*/
+		color: #8B0000;
+	}
+	
+	nav div li a:visited {
+		color: #000000;
+	}
+	
+	nav div li a:hover{
+		color: #8B0000;
+		font-style: bold;
+	}
+	
+	nav div li a:active{
+		color: #8B0000;
+	}
+.infol, .infod
+{
+	display: block;
+}
+#form1
+{
+	margin-left: 2em;
+	color: green;
+}
+#form2
+{
+	margin-left: 2em;
+	color: darkred;
+}

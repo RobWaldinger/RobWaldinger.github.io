@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- bootstraps, jquery and javascript links -->
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="css/RobRepair.css" /> 
+<!-- css to over ride bootstraps and customize css -->
+<link rel="stylesheet" href="css/RobRepair.css" />
+<script src="order1.js"></script>
+	<title>Rob Repair Services</title>
+</head>
+<body>
+
+<!-- Navigation bar from bootstraps -->
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="RobRepair.html">Rob's Repair Services</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li ><a href="index.html">Home</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="services.html">Services</a></li>
+	  <li><a href="maps.html">Directions</a></li>
+      <li><a href="order1.html">Order</a></li>
+    </ul>
+  </div>
+</nav>
+	
+<main>
+<!-- Form for customer data to be inputed by user -->
+	<form action="orders.html" id="form1" autocomplete="off"> 
+		<label class="infol" for="fName">First Name</label>
+			<input class="infod" type="text" id="fName" name ="firstName" required="required">
+					
+		<label class="infol" for="lName">Last Name</label>
+			<input class="infod" type="text" id="lName" name ="lastName" required="required" >
+			
+		<label class="infol" for="addr">Address</label>
+			<input class="infod" type="text" id="addr" name ="address" required="required" >
+					
+		<label class="infol" for="city">City</label>
+			<input class="infod" type="text" id="city" name ="city" required="required" >
+					
+		<label class="infol" for="zip">Zipcode</label>
+			<input class="infod" type="text" id="zip" name ="zipcode" required="required" >
+					
+		<label class="infol" for="email">Email:</label>
+			<input class="infod" type="email" id="email" name ="email" required="required">
+			
+		<label class="infol" for="phone">Phone:</label>
+			<input class="infod" type="tel" id="phone" name ="phone" required="required">
+					
+<!-- calls function to make sure all fields are filled out.  Alert message to fill out information if missing or display data entered-->					
+		<button id="displayInfo" type="button" onclick="checkFields();">Submit</button>
+				
+					
+<!-- customer infor printed in paragraph -->
+		<p id="verifyInfo"></p>
+<!-- Clears textboxes to reenter information -->
+		<button id="reset" type="button" onclick="resetContact();">Reset</button>
+<!-- Stores data and opens 2nd part of orders form-->
+		<button id="order" type="submit" onclick="startOrder();">Start your Order</button>
+					
+</form>
+		
+		
+		
+	</main>
+	
+	<footer>
+		&copy Rob Repair Services | <a href="tel:631-766-6811">631-766-6811</a> | <a href="mailto:Rob@RobRepair.com">Rob@RobRepair.com</a>
+	</footer>
+</body>
+</html>

@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="css/RobRepair.css."> 
+	<title>Rob Repair Systems</title>
+</head>
+<body>
+	<header>
+		
+		
+	</header>
+	
+	<nav class="navbar navbar-default">
+	  <div class="container-fluid">
+		<div class="navbar-header">
+		  <a class="navbar-brand" href="RobRepair.html">Rob's Repair Services</a>
+		</div>
+		<ul class="nav navbar-nav">
+		  <li ><a href="RobRepair.html">Home</a></li>
+		  <li><a href="about.html">About Us</a></li>
+		  <li><a href="services.html">Services</a></li>
+		  <li><a href="maps.html">Directions</a></li>
+		  <li><a href="order1.html">Order</a></li>
+		</ul>
+	  </div>
+	</nav>
+
+	<main>
+	<div id="customer">
+		<p id= "output"> </p>
+	</div>
+	
+	<form name="orderForm" id="form2"> <!-- checkboxes for services and function to update total called -->
+		<p>Desktop</p>
+		<div class="buy">
+		<label ><input class="buy" name="service" type="checkbox" onchange="updateTotal()" value="75">Ram $75</label>
+		<label ><input class="buy" name="service" type="checkbox" onchange="updateTotal()" value="100">SSD drive $100</label>
+		<label ><input class="buy" name="service" type="checkbox" onchange="updateTotal()" value="125">Upgrade OS $125</label>
+		<label ><input class="buy" name="service" type="checkbox" onchange="updateTotal()" value="150">Fix Virus/malware $150</label><br>
+		</div>
+		<p>Laptop</p>
+		<div class="buy">
+		<label ><input class="buy" name="service" type="checkbox" onchange="updateTotal()" value="100">Ram $100</label>
+		<label ><input class="buy" name="service" type="checkbox" onchange="updateTotal()" value="150">SSD drive $150</label>
+		<label ><input class="buy" name="service" type="checkbox" onchange="updateTotal()" value="125">Upgrade OS $125</label>
+		<label ><input class="buy" name="service" type="checkbox" onchange="updateTotal()" value="150">Fix Virus/malware $150</label><br>
+		<div>
+		<p>Tablet</p>
+		<div class="buy">
+		<label ><input class="buy" name="service" type="checkbox" onchange="updateTotal()" value="100">Replace Screen $100</label>
+		<label ><input class="buy" name="service" type="checkbox" onchange="updateTotal()" value="100">Replace hard drive $100</label>
+		<label ><input class="buy" name="service" type="checkbox" onchange="updateTotal()" value="75">Replace battery $75</label>
+		<label ><input class="buy" name="service" type="checkbox" onchange="updateTotal()" value="250">Replace Tablet $250</label><br>
+		</div>
+		<p>Cell</p>
+		<div class="buy">
+		<label ><input class="buy" name="service" type="checkbox" onchange="updateTotal()" value="100">Replace Screen $100</label>
+		<label ><input class="buy" name="service" type="checkbox" onchange="updateTotal()" value="100">Replace hard drive $100</label>
+		<label ><input class="buy" name="service" type="checkbox" onchange="updateTotal()" value="75">Replace battery $75</label>
+		<label ><input class="buy" name="service" type="checkbox" onchange="updateTotal()" value="350">Replace Cell $350</label><br><br><br>		
+		</div>
+		Total: <input id="finalTotal" type="text" size="4" name="showTotal" value="0"/>
+		
+<!-- Credit Card information and validation -->		
+		<fieldset id="paymentInfo" class="text">
+            <legend>Payment Information</legend>
+            <div class="offset">
+               <label for="ccNum">Card #</label>
+               <input id="ccNum" name="CardNumber" type="number" required="required" />
+               <div id="ccNumErrorMessage"></div>
+            </div>
+            <div id="cards" class="inline">
+               <input class="cc" id="visa" name="PaymentType" type="radio" value="Visa" />
+               <label for="visa">Visa</label>
+               <input class="cc" id="mc" name="PaymentType" type="radio" value="MC" />
+               <label for="mc">Master Card</label>
+               <input class="cc" id="discover" name="PaymentType" type="radio" value="Discover" />
+               <label for="discover">Discover</label>
+               <input class="cc" id="amex" name="PaymentType" type="radio" value="AmEx" />
+               <label for="amex">American Express</label>
+            </div>
+            <div class="offset">
+               <label>Expiration</label>
+               <div class="inline" id="exp">
+                  <label for="expMo" id="expMoLabel">Expiration Month</label>
+                  <select id="expMo" name="ExpMonth" required="required">
+					 <option value="selectMonth">select Month</option>
+                     <option value="01">01</option>
+                     <option value="02">02</option>
+                     <option value="03">03</option>
+                     <option value="04">04</option>
+                     <option value="05">05</option>
+                     <option value="06">06</option>
+                     <option value="07">07</option>
+                     <option value="08">08</option>
+                     <option value="09">09</option>
+                     <option value="10">10</option>
+                     <option value="11">11</option>
+                     <option value="12">12</option>
+                  </select>
+                  <label for="expYr" id="expYrLabel">Expiration Year</label>
+                  <select id="expYr" name="ExpYear" required="required">
+				     <option value="selectYear">select Year</option>
+                     <option value="2017">2017</option>
+                     <option value="2018">2018</option>
+                     <option value="2019">2019</option>
+                     <option value="2020">2020</option>
+                     <option value="2021">2021</option>
+                  </select>
+               </div>
+               <label for="cvv">CVV</label>
+               <input id="cvv" name="CVVValue" type="number" required="required" /> 
+            </div>
+			<button id="total" type="button" onclick="serviceSelected();">Pay Bill</button>
+         </fieldset>
+		
+	</form>
+	
+	</main>
+	
+	<footer>
+		&copy Rob Repair Systems | <a href="tel:631-766-6811">631-766-6811</a> | <a href="mailto:Rob@RobRepair.com">Rob@RobRepair.com</a>
+	</footer>
+	<script src="jquery-3.2.1.js"></script>
+	<script src="orders.js"></script>
+</body>
+</html>
